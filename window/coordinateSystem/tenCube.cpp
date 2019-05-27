@@ -1,4 +1,4 @@
-#define __CUSTOM__TEST__ false
+#define __CUSTOM__TEST__ true
 #if true == __CUSTOM__TEST__
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -9,10 +9,6 @@
 #include <GLFW/glfw3.h>
 
 #include <Shader/Shader.h>
-
-//#include <glm/glm.hpp>
-//#include <glm/gtc/matrix_transform.hpp>
-//#include <glm/gtc/type_ptr.hpp>
 
 #include <iostream>
 
@@ -243,7 +239,14 @@ int main()
 			glm::mat4 model;
 			model = glm::translate(model, cubePositions[i]);
 			float angle = 20.0f * i;
-			model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
+			if (0 == i % 3)
+			{
+				model = glm::rotate(model, (float)glfwGetTime() * glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
+			}
+			else
+			{
+				model = glm::rotate(model, (float)glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
+			}
 			//unsigned int modelLoc = glGetUniformLocation(ourShader.ID, "model");
 			//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 			ourShader.setMat4("model", model);
