@@ -121,6 +121,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\Camera\camera.h" />
     <ClInclude Include="..\..\include\Shader\Shader.h" />
   </ItemGroup>
   <ItemGroup>

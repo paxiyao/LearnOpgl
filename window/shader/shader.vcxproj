@@ -121,7 +121,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\include\Shader\Shader.cpp" />
     <ClCompile Include="attribute.cpp" />
     <ClCompile Include="colorGradient.cpp" />
     <ClCompile Include="moreVertex.cpp" />

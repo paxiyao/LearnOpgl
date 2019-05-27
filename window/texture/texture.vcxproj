@@ -124,7 +124,6 @@
     <ClInclude Include="..\..\include\Shader\Shader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\include\Shader\Shader.cpp" />
     <ClCompile Include="changeVisble.cpp" />
     <ClCompile Include="filtering.cpp" />
     <ClCompile Include="flop.cpp" />

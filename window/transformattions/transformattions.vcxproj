@@ -124,7 +124,6 @@
     <ClInclude Include="..\..\include\Shader\Shader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\include\Shader\Shader.cpp" />
     <ClCompile Include="RorateToMove.cpp" />
     <ClCompile Include="Scale.cpp" />
     <ClCompile Include="transfor.cpp" />

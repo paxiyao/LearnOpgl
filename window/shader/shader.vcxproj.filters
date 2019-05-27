@@ -30,9 +30,6 @@
     <ClCompile Include="shaderObj.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\include\Shader\Shader.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="perversion.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
