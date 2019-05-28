@@ -35,6 +35,12 @@
     <ClCompile Include="perspectiveMove.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="fpsCamera.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="customLookAt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="7.1.fragment.glsl">

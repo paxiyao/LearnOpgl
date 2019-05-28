@@ -8,8 +8,8 @@
 #include <vector>
 
 // Defines several possible options for camera movement. Used as abstraction to stay away from window-system specific input methods
-enum Camera_MoveMent {
-	FORWORD,
+enum Camera_Movement {
+	FORWARD,
 	BACKWARD,
 	LEFT,
 	RIGHT
@@ -65,20 +65,52 @@ public:
 		return glm::lookAt(Position, Position + Front, Up);
 	}
 
+	// Custom implementation of the LookAt function
+	glm::mat4 calculate_lookAt_matrix(glm::vec3 position, glm::vec3 target, glm::vec3 worldUp)
+	{
+		// 1. Position = known
+		// 2. Calculate cameraDirection
+		glm::vec3 zaxis = glm::normalize(position - target);
+		// 3. Get positive right axis vector
+		glm::vec3 xaxis = glm::normalize(glm::cross(glm::normalize(worldUp), zaxis));
+		// 4. Calculate camera up vector
+		glm::vec3 yaxis = glm::cross(zaxis, xaxis);
+
+		// Create translation and rotation matrix
+		// In glm we access elements as mat[col][row] due to column-major layout
+		glm::mat4 translation; // Identity matrix by default
+		translation[3][0] = -position.x; // Third column, first row
+		translation[3][1] = -position.y;
+		translation[3][2] = -position.z;
+		glm::mat4 rotation;
+		rotation[0][0] = xaxis.x; // First column, first row
+		rotation[1][0] = xaxis.y;
+		rotation[2][0] = xaxis.z;
+		rotation[0][1] = yaxis.x; // First column, second row
+		rotation[1][1] = yaxis.y;
+		rotation[2][1] = yaxis.z;
+		rotation[0][2] = zaxis.x; // First column, third row
+		rotation[1][2] = zaxis.y;
+		rotation[2][2] = zaxis.z;
+
+		// Return lookAt matrix as combination of translation and rotation matrix
+		return rotation * translation; // Remember to read from right to left (first translation then rotation)
+	}
+
 	// Processes input received from any keyboard-like input system. Accepts input parameter in the form of camera defined ENUM (to abstract it from windowing systems)
-	void ProcessKeyBoard(Camera_MoveMent direction, float deltaTime)
+	void ProcessKeyboard(Camera_Movement direction, float deltaTime)
 	{
 		float velocity = MovementSpeed * deltaTime;
 		switch (direction)
 		{
-		case FORWORD:
-			Position += Front * velocity;
-			break;
-		case BACKWARD:
+		case FORWARD:
 			Position -= Front * velocity;
 			break;
+		case BACKWARD:
+			Position += Front * velocity;
+			break;
 		case LEFT:
-			Position -= Right * velocity;
+			Position += Right * velocity;
 			break;
 		case RIGHT:
 			Position -= Right * velocity;
@@ -86,6 +118,8 @@ public:
 		default:
 			break;
 		}
+		// make sure the user stays at the ground level
+		Position.y = 0.0f; // <-- this one-liner keeps the user at the ground level (xz plane)
 	}
 
 	// Processes input received from a mouse input system. Expects the offset value in both the x and y direction.
@@ -128,7 +162,7 @@ private:
 		// Calculate the new Front vector
 		glm::vec3 front;
 		front.x = cos(glm::radians(Yaw)) * cos(glm::radians(Pitch));
-		front.y = sin(glm::radians(Yaw));
+		front.y = sin(glm::radians(Pitch));
 		front.z = sin(glm::radians(Yaw)) * cos(glm::radians(Pitch));
 		Front = glm::normalize(front);
 		// Also re-calculate the Right and Up vector

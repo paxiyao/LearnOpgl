@@ -1,4 +1,4 @@
-#define __CUSTOM__TEST__ false
+#define __CUSTOM__TEST__ true
 #if true == __CUSTOM__TEST__
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -9,6 +9,8 @@
 #include <GLFW/glfw3.h>
 
 #include <Shader/Shader.h>
+
+#include <Camera/camera.h>
 
 #include <iostream>
 
@@ -22,24 +24,14 @@ const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
 // camera
-glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 5.0f);
-glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
-glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
-float cameraSpeed = 0.01f;
-
-// timing
-float deltaTime = 0.0f;
-float lastFrame = 0.0f;
-
-// 
-float yaw   = -90.0f;	// yaw is initialized to -90.0 degrees since a yaw of 0.0 results in a direction vector pointing to the right so we initially rotate a bit to the left.
-float pitch =  0.0f;
-float lastX = 400;
-float lastY = 300;
+Camera ourCamera(glm::vec3(0.0f, 0.0f, 3.0f));
+float lastX = SCR_WIDTH / 2.0f;
+float lastY = SCR_HEIGHT / 2.0f;
 bool firstMouse = true;
 
-// field of view
-float fov = 45.0f;
+// timing
+float deltaTime = 0.0f;	// time between current frame and last frame
+float lastFrame = 0.0f;
 
 int main()
 {
@@ -125,6 +117,20 @@ int main()
 		-0.5f,  0.5f,  0.5f,  0.0f, 0.0f,
 		-0.5f,  0.5f, -0.5f,  0.0f, 1.0f
 	};
+
+	glm::vec3 cubePositions[] = {
+	  glm::vec3(0.0f,  0.0f,  0.0f),
+	  glm::vec3(2.0f,  5.0f, -15.0f),
+	  glm::vec3(-1.5f, -2.2f, -2.5f),
+	  glm::vec3(-3.8f, -2.0f, -12.3f),
+	  glm::vec3(2.4f, -0.4f, -3.5f),
+	  glm::vec3(-1.7f,  3.0f, -7.5f),
+	  glm::vec3(1.3f, -2.0f, -2.5f),
+	  glm::vec3(1.5f,  2.0f, -2.5f),
+	  glm::vec3(1.5f,  0.2f, -1.5f),
+	  glm::vec3(-1.3f,  1.0f, -1.5f)
+	};
+
 	unsigned int indices[] = {
 		0, 1, 3, // first triangle
 		1, 2, 3  // second triangle
@@ -206,19 +212,6 @@ int main()
 	// or set it via the texture class
 	ourShader.setInt("texture2", 1);
 
-	glm::vec3 cubePositions[] = {
-	  glm::vec3(0.0f,  0.0f,  0.0f),
-	  glm::vec3(2.0f,  5.0f, -15.0f),
-	  glm::vec3(-1.5f, -2.2f, -2.5f),
-	  glm::vec3(-3.8f, -2.0f, -12.3f),
-	  glm::vec3(2.4f, -0.4f, -3.5f),
-	  glm::vec3(-1.7f,  3.0f, -7.5f),
-	  glm::vec3(1.3f, -2.0f, -2.5f),
-	  glm::vec3(1.5f,  2.0f, -2.5f),
-	  glm::vec3(1.5f,  0.2f, -1.5f),
-	  glm::vec3(-1.3f,  1.0f, -1.5f)
-	};
-
 	// 开启深度测试
 	glEnable(GL_DEPTH_TEST);
 	//glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
@@ -249,13 +242,17 @@ int main()
 		// render container
 		ourShader.use();
 
-		glBindVertexArray(VAO);
-
 		// 投影矩阵 做透视除法的
 		glm::mat4 projection;
-		projection = glm::perspective(glm::radians(fov), (float)(SCR_WIDTH / SCR_HEIGHT), 0.1f, 100.0f);
+		projection = glm::perspective(glm::radians(ourCamera.Zoom), (float)(SCR_WIDTH / SCR_HEIGHT), 0.1f, 100.0f);
 		ourShader.setMat4("projection", projection);
 
+		// 观察矩阵 沿z轴后移三个单位
+		glm::mat4 view = ourCamera.calculate_lookAt_matrix(ourCamera.Position, ourCamera.Position + ourCamera.Front, ourCamera.WorldUp);
+		ourShader.setMat4("view", view);
+
+		// render box
+		glBindVertexArray(VAO);
 		for (unsigned int i = 0; i < 10; i++)
 		{
 			glm::mat4 model;
@@ -270,12 +267,6 @@ int main()
 				model = glm::rotate(model, (float)glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
 			}
 			ourShader.setMat4("model", model);
-
-			// 观察矩阵 沿z轴后移三个单位
-			glm::mat4 view;
-			view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
-			ourShader.setMat4("view", view);
-
 			glDrawArrays(GL_TRIANGLES, 0, 36);
 		}
 
@@ -296,33 +287,6 @@ int main()
 	return 0;
 }
 
-// process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
-// ---------------------------------------------------------------------------------------------------------
-void processInput(GLFWwindow *window)
-{
-	cameraSpeed = 2.5f * deltaTime;
-	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-	{
-		glfwSetWindowShouldClose(window, true);
-	}
-	else if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-	{
-		cameraPos -= cameraFront * cameraSpeed;
-	}
-	else if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-	{
-		cameraPos += cameraFront * cameraSpeed;
-	}
-	else if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-	{
-		cameraPos += glm::cross(cameraFront, cameraUp) * cameraSpeed;
-	}
-	else if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-	{
-		cameraPos -= glm::cross(cameraFront, cameraUp) * cameraSpeed;
-	}
-}
-
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
 // ---------------------------------------------------------------------------------------------
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
@@ -330,6 +294,32 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 	// make sure the viewport matches the new window dimensions; note that width and 
 	// height will be significantly larger than specified on retina displays.
 	glViewport(0, 0, width, height);
+}
+
+// process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
+// ---------------------------------------------------------------------------------------------------------
+void processInput(GLFWwindow *window)
+{
+	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+	{
+		glfwSetWindowShouldClose(window, true);
+	}
+	else if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+	{
+		ourCamera.ProcessKeyboard(FORWARD, deltaTime);
+	}
+	else if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+	{
+		ourCamera.ProcessKeyboard(BACKWARD, deltaTime);
+	}
+	else if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+	{
+		ourCamera.ProcessKeyboard(LEFT, deltaTime);
+	}
+	else if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+	{
+		ourCamera.ProcessKeyboard(RIGHT, deltaTime);
+	}
 }
 
 void mouse_callback(GLFWwindow* window, double xpos, double ypos)
@@ -346,39 +336,12 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 	lastX = xpos;
 	lastY = ypos;
 
-	float sensitivity = 0.05;
-	xoffset *= sensitivity;
-	yoffset *= sensitivity;
-
-	yaw += xoffset;
-	pitch += yoffset;
-
-	if (pitch > 89.0f)
-	{
-		pitch = 89.0f;
-	}
-	else if (pitch < -89.0f)
-	{
-		pitch = -89.0f;
-	}
-
-	glm::vec3 front;
-	front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
-	front.y = sin(glm::radians(pitch));
-	front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
-	cameraFront = glm::normalize(front);
+	ourCamera.ProcessMouseMovement(xoffset, yoffset);
 }
 
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
-	if (fov >= 1.0f && fov <= 45.0f)
-		fov -= yoffset;
-
-	if (fov <= 1.0f)
-		fov = 1.0f;
-
-	if (fov >= 45.0f)
-		fov = 45.0f;
+	ourCamera.ProcessMouseScroll(yoffset);
 }
 
 #endif //true == __CUSTOM__TEST__
