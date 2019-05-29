@@ -21,6 +21,15 @@
     <ClCompile Include="basicLight.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="lightSourceMove.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="viewMatCaculateLight.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gouraudShader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="2.1.1.light.fragment.glsl">
@@ -33,6 +42,30 @@
       <Filter>glsl</Filter>
     </None>
     <None Include="2.1.1.object.vertex.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.1.3.light.fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.1.3.light.vertex.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.1.3.object.fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.1.3.object.vertex.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.1.4.light.fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.1.4.light.vertex.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.1.4.object.fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.1.4.object.vertex.glsl">
       <Filter>glsl</Filter>
     </None>
   </ItemGroup>

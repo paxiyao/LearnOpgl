@@ -17,9 +17,10 @@ void main()
 	vec3 ambient = ambientStrength * lightColor;
 
 	// diffuse
+	float difStrength = 1.0;
 	vec3 norm = normalize(Normal);
 	vec3 lightDir = normalize(lightPos - FragPos);
-	float diffuse = max(dot(norm, lightDir), 0);
+	float diffuse = difStrength * max(dot(norm, lightDir), 0) * lightColor;
 
 	// specular
 	float specularStrength = 0.5;
@@ -29,5 +30,5 @@ void main()
 	vec3 specular = specularStrength * spec * lightColor;
 
 	vec3 result = (ambient + diffuse + specular) * objectColor;
-    FragColor = vec4(result, 1.0f);
+    FragColor = vec4(result, 1.0);
 }

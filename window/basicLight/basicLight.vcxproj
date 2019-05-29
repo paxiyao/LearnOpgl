@@ -139,12 +139,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="basicLight.cpp" />
+    <ClCompile Include="gouraudShader.cpp" />
+    <ClCompile Include="lightSourceMove.cpp" />
+    <ClCompile Include="viewMatCaculateLight.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="2.1.1.light.fragment.glsl" />
     <None Include="2.1.1.light.vertex.glsl" />
     <None Include="2.1.1.object.fragment.glsl" />
     <None Include="2.1.1.object.vertex.glsl" />
+    <None Include="2.1.3.light.fragment.glsl" />
+    <None Include="2.1.3.light.vertex.glsl" />
+    <None Include="2.1.3.object.fragment.glsl" />
+    <None Include="2.1.3.object.vertex.glsl" />
+    <None Include="2.1.4.light.fragment.glsl" />
+    <None Include="2.1.4.light.vertex.glsl" />
+    <None Include="2.1.4.object.fragment.glsl" />
+    <None Include="2.1.4.object.vertex.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
