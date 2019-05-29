@@ -156,8 +156,6 @@ int main()
 	// or set it via the texture class
 	ourShader.setInt("texture2", 1);
 
-
-
 	// render loop
 	// -----------
 	while (!glfwWindowShouldClose(window))
