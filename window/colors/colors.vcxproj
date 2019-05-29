@@ -141,9 +141,9 @@
     <ClCompile Include="colors.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="8.1.light.fragment.glsl" />
-    <None Include="8.1.object.fragment.glsl" />
-    <None Include="8.1.vertex.glsl" />
+    <None Include="2.1.1.light.fragment.glsl" />
+    <None Include="2.1.1.object.fragment.glsl" />
+    <None Include="2.1.1.vertex.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

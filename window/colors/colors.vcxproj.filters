@@ -23,13 +23,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="8.1.vertex.glsl">
+    <None Include="2.1.1.light.fragment.glsl">
       <Filter>glsl</Filter>
     </None>
-    <None Include="8.1.object.fragment.glsl">
+    <None Include="2.1.1.object.fragment.glsl">
       <Filter>glsl</Filter>
     </None>
-    <None Include="8.1.light.fragment.glsl">
+    <None Include="2.1.1.vertex.glsl">
       <Filter>glsl</Filter>
     </None>
   </ItemGroup>

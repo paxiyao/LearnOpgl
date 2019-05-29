@@ -13,10 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="glsl">
+      <UniqueIdentifier>{f6438e35-8ccc-4964-a4c6-47641280bff8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="basicLight.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="2.1.1.light.fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.1.1.light.vertex.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.1.1.object.fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.1.1.object.vertex.glsl">
+      <Filter>glsl</Filter>
+    </None>
   </ItemGroup>
 </Project>

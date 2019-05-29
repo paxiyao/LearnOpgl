@@ -70,8 +70,8 @@ int main()
 
 	// build and compile our shader zprogram
 	// ------------------------------------
-	Shader objectShader("8.1.vertex.glsl", "8.1.object.fragment.glsl");
-	Shader lightShader("8.1.vertex.glsl", "8.1.light.fragment.glsl");
+	Shader objectShader("2.1.1.vertex.glsl", "2.1.1.object.fragment.glsl");
+	Shader lightShader("2.1.1.vertex.glsl", "2.1.1.light.fragment.glsl");
 
 	// set up vertex data (and buffer(s)) and configure vertex attributes
 	// ------------------------------------------------------------------
