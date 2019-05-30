@@ -24,6 +24,15 @@
     <ClCompile Include="specularMaps.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="reverseSpecularMaps.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="colorSpecularMaps.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="emissionMap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="2.3.1.light.fragment.glsl">
@@ -50,5 +59,55 @@
     <None Include="2.3.2.object.vertex.glsl">
       <Filter>glsl</Filter>
     </None>
+    <None Include="2.3.3.light.fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.3.3.light.vertex.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.3.3.object.fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.3.3.object.vertex.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.3.4.light.fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.3.4.light.vertex.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.3.4.object.fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.3.4.object.vertex.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.3.5.light.fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.3.5.light.vertex.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.3.5.object.fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.3.5.object.vertex.glsl">
+      <Filter>glsl</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="container2.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="container2_specular.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="lighting_maps_specular_color.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="matrix.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>

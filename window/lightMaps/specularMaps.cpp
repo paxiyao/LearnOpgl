@@ -1,4 +1,4 @@
-#define __CUSTOM__TEST__ true
+#define __CUSTOM__TEST__ false
 #if true == __CUSTOM__TEST__
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -263,9 +263,6 @@ int main()
 		// world transformation
 		glm::mat4 model = glm::mat4(1.0f);
 		lightingShader.setMat4("model", model);
-
-		// set uniforms normal matrix
-		lightingShader.setMat3("normalMat", glm::mat3(glm::transpose(glm::inverse(model))));
 
 		// render the cube
 		glBindVertexArray(cubeVAO);

@@ -238,9 +238,6 @@ int main()
 		glm::mat4 model = glm::mat4(1.0f);
 		lightingShader.setMat4("model", model);
 
-		// set uniforms normal matrix
-		lightingShader.setMat3("normalMat", glm::mat3(glm::transpose(glm::inverse(model))));
-
 		// render the cube
 		glBindVertexArray(cubeVAO);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
