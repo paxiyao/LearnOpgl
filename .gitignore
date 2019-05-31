@@ -3,3 +3,6 @@
 /window/*/x64/
 /window/*/Debug/
 /window/.vs/
+/window/Release/
+/window/*/Release/
+

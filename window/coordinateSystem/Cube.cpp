@@ -8,7 +8,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#include <Shader/Shader.h>
+#include <learnopengl/shader.h>
 
 //#include <glm/glm.hpp>
 //#include <glm/gtc/matrix_transform.hpp>

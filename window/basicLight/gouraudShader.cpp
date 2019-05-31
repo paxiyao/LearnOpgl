@@ -5,9 +5,9 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-#include <Shader/Shader.h>
+#include <learnopengl/shader.h>
 
-#include <Camera/camera.h>
+#include <learnopengl/camera.h>
 
 #include <iostream>
 
