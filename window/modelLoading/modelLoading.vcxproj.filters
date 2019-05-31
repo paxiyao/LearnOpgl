@@ -24,12 +24,21 @@
     <ClCompile Include="..\..\include\glad.c">
       <Filter>头文件</Filter>
     </ClCompile>
+    <ClCompile Include="modelLight.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="1.model_loading.fs">
+    <None Include="1.model_loading_vertex.glsl">
       <Filter>glsl</Filter>
     </None>
-    <None Include="1.model_loading.vs">
+    <None Include="1.model_loading_fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.model_loading_fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="2.model_loading_vertex.glsl">
       <Filter>glsl</Filter>
     </None>
   </ItemGroup>

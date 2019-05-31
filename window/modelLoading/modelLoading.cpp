@@ -1,3 +1,6 @@
+#define __CUSTOM__TEST__ false
+#if true == __CUSTOM__TEST__
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
@@ -58,7 +61,7 @@ int main()
 	glfwSetScrollCallback(window, scroll_callback);
 
 	// tell GLFW to capture our mouse
-	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+	//glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
 	// glad: load all OpenGL function pointers
 	// ---------------------------------------
@@ -74,12 +77,12 @@ int main()
 
 	// build and compile shaders
 	// -------------------------
-	Shader ourShader1("1.model_loading.vs", "1.model_loading.fs");
+	Shader ourShader1("1.model_loading_vertex.glsl", "1.model_loading_fragment.glsl");
 	// load models
 	// -----------
 	Model ourModel1("resources/objects/nanosuit/nanosuit.obj");
 
-	Shader ourShader2("1.model_loading.vs", "1.model_loading.fs");
+	Shader ourShader2("1.model_loading_vertex.glsl", "1.model_loading_fragment.glsl");
 	Model ourModel2("resources/objects/nanosuit/nanosuit.obj");
 
 	// draw in wireframe
@@ -195,3 +198,5 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
 	camera.ProcessMouseScroll(yoffset);
 }
+
+#endif __CUSTOM__TEST__

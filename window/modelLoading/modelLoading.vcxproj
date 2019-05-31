@@ -139,11 +139,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\include\glad.c" />
+    <ClCompile Include="modelLight.cpp" />
     <ClCompile Include="modelLoading.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="1.model_loading.fs" />
-    <None Include="1.model_loading.vs" />
+    <None Include="1.model_loading_vertex.glsl" />
+    <None Include="1.model_loading_fragment.glsl" />
+    <None Include="2.model_loading_fragment.glsl" />
+    <None Include="2.model_loading_vertex.glsl" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\learnopengl\mesh.h" />
