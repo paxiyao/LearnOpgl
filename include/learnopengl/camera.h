@@ -104,16 +104,16 @@ public:
 		switch (direction)
 		{
 		case FORWARD:
-			Position -= Front * velocity;
-			break;
-		case BACKWARD:
 			Position += Front * velocity;
 			break;
+		case BACKWARD:
+			Position -= Front * velocity;
+			break;
 		case LEFT:
-			Position += Right * velocity;
+			Position -= Right * velocity;
 			break;
 		case RIGHT:
-			Position -= Right * velocity;
+			Position += Right * velocity;
 			break;
 		default:
 			break;
