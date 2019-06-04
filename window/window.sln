@@ -45,6 +45,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stencilTesting", "stencilTe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "blending", "blending\blending.vcxproj", "{B05C50CF-ADA8-4581-9226-5A8C263C9254}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "faceCulling", "faceCulling\faceCulling.vcxproj", "{F5C8D275-D358-40D4-9A5D-E2FFB368D59D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -189,6 +191,14 @@ Global
 		{B05C50CF-ADA8-4581-9226-5A8C263C9254}.Release|x64.Build.0 = Release|x64
 		{B05C50CF-ADA8-4581-9226-5A8C263C9254}.Release|x86.ActiveCfg = Release|Win32
 		{B05C50CF-ADA8-4581-9226-5A8C263C9254}.Release|x86.Build.0 = Release|Win32
+		{F5C8D275-D358-40D4-9A5D-E2FFB368D59D}.Debug|x64.ActiveCfg = Debug|x64
+		{F5C8D275-D358-40D4-9A5D-E2FFB368D59D}.Debug|x64.Build.0 = Debug|x64
+		{F5C8D275-D358-40D4-9A5D-E2FFB368D59D}.Debug|x86.ActiveCfg = Debug|Win32
+		{F5C8D275-D358-40D4-9A5D-E2FFB368D59D}.Debug|x86.Build.0 = Debug|Win32
+		{F5C8D275-D358-40D4-9A5D-E2FFB368D59D}.Release|x64.ActiveCfg = Release|x64
+		{F5C8D275-D358-40D4-9A5D-E2FFB368D59D}.Release|x64.Build.0 = Release|x64
+		{F5C8D275-D358-40D4-9A5D-E2FFB368D59D}.Release|x86.ActiveCfg = Release|Win32
+		{F5C8D275-D358-40D4-9A5D-E2FFB368D59D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -211,6 +221,7 @@ Global
 		{959E8B74-EEEF-413A-B64B-9519B6AF68D0} = {A552489E-FB3C-467A-9449-FA0719B636A9}
 		{9E387DF1-E5D6-4573-939F-1B6E9195672E} = {A552489E-FB3C-467A-9449-FA0719B636A9}
 		{B05C50CF-ADA8-4581-9226-5A8C263C9254} = {A552489E-FB3C-467A-9449-FA0719B636A9}
+		{F5C8D275-D358-40D4-9A5D-E2FFB368D59D} = {A552489E-FB3C-467A-9449-FA0719B636A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF82F4D1-E477-4765-8D1A-588C40D0A7BC}
