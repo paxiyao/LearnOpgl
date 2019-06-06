@@ -140,6 +140,7 @@
   <ItemGroup>
     <ClCompile Include="explodingObjects.cpp" />
     <ClCompile Include="geometryShader.cpp" />
+    <ClCompile Include="visualizingNormalVectors.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="9.1.fragment.glsl" />
@@ -148,6 +149,15 @@
     <None Include="9.2.fragment.glsl" />
     <None Include="9.2.geometry.glsl" />
     <None Include="9.2.vertex.glsl" />
+    <None Include="9.3.fragment.glsl" />
+    <None Include="9.3.geometry.glsl" />
+    <None Include="9.3.model_fragment.glsl" />
+    <None Include="9.3.model_vertex.glsl" />
+    <None Include="9.3.vertex.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\learnopengl\mesh.h" />
+    <ClInclude Include="..\..\include\learnopengl\model.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

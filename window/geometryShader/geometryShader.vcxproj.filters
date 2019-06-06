@@ -24,6 +24,9 @@
     <ClCompile Include="explodingObjects.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="visualizingNormalVectors.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="9.1.fragment.glsl">
@@ -44,5 +47,28 @@
     <None Include="9.2.vertex.glsl">
       <Filter>glsl</Filter>
     </None>
+    <None Include="9.3.fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="9.3.geometry.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="9.3.vertex.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="9.3.model_fragment.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="9.3.model_vertex.glsl">
+      <Filter>glsl</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\learnopengl\mesh.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\learnopengl\model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

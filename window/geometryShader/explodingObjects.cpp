@@ -1,4 +1,4 @@
-#define __CUSTOM__TEST__ true
+#define __CUSTOM__TEST__ false
 #if true == __CUSTOM__TEST__
 
 #include "glad.c"
