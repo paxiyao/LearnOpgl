@@ -55,6 +55,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "advancedGLSL", "advancedGLS
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "geometryShader", "geometryShader\geometryShader.vcxproj", "{DF7D8769-83C3-4A9A-88E1-BCD9EBA67E3F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "instancing", "instancing\instancing.vcxproj", "{840A23D5-C837-4CC0-B176-AFC488F380C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -239,6 +241,14 @@ Global
 		{DF7D8769-83C3-4A9A-88E1-BCD9EBA67E3F}.Release|x64.Build.0 = Release|x64
 		{DF7D8769-83C3-4A9A-88E1-BCD9EBA67E3F}.Release|x86.ActiveCfg = Release|Win32
 		{DF7D8769-83C3-4A9A-88E1-BCD9EBA67E3F}.Release|x86.Build.0 = Release|Win32
+		{840A23D5-C837-4CC0-B176-AFC488F380C1}.Debug|x64.ActiveCfg = Debug|x64
+		{840A23D5-C837-4CC0-B176-AFC488F380C1}.Debug|x64.Build.0 = Debug|x64
+		{840A23D5-C837-4CC0-B176-AFC488F380C1}.Debug|x86.ActiveCfg = Debug|Win32
+		{840A23D5-C837-4CC0-B176-AFC488F380C1}.Debug|x86.Build.0 = Debug|Win32
+		{840A23D5-C837-4CC0-B176-AFC488F380C1}.Release|x64.ActiveCfg = Release|x64
+		{840A23D5-C837-4CC0-B176-AFC488F380C1}.Release|x64.Build.0 = Release|x64
+		{840A23D5-C837-4CC0-B176-AFC488F380C1}.Release|x86.ActiveCfg = Release|Win32
+		{840A23D5-C837-4CC0-B176-AFC488F380C1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -266,6 +276,7 @@ Global
 		{DD73C922-FDC4-4B71-A6FC-D6E4254CF702} = {A552489E-FB3C-467A-9449-FA0719B636A9}
 		{3106E0BE-BD50-4766-B4F9-3F2D3479D741} = {A552489E-FB3C-467A-9449-FA0719B636A9}
 		{DF7D8769-83C3-4A9A-88E1-BCD9EBA67E3F} = {A552489E-FB3C-467A-9449-FA0719B636A9}
+		{840A23D5-C837-4CC0-B176-AFC488F380C1} = {A552489E-FB3C-467A-9449-FA0719B636A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF82F4D1-E477-4765-8D1A-588C40D0A7BC}
