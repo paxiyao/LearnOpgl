@@ -1,4 +1,4 @@
-#define __CUSTOM__TEST__ false
+#define __CUSTOM__TEST__ true
 #if true == __CUSTOM__TEST__
 
 #define STB_IMAGE_IMPLEMENTATION

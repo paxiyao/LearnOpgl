@@ -1,4 +1,4 @@
-#define __CUSTOM__TEST__ false
+#define __CUSTOM__TEST__ true
 #if true == __CUSTOM__TEST__
 
 #define STB_IMAGE_IMPLEMENTATION
@@ -166,7 +166,7 @@ int main()
 	glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
 	// 投影矩阵 做透视除法的
 	glm::mat4 projection;
-	projection = glm::perspective(glm::radians(45.0f), (float)(SCR_WIDTH / SCR_HEIGHT), 0.1f, 100.0f);
+	projection = glm::perspective(glm::radians(30.0f), (float)(SCR_WIDTH / SCR_HEIGHT), 0.1f, 100.0f);
 	unsigned int projectionLoc = glGetUniformLocation(ourShader.ID, "projection");
 	glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
 
