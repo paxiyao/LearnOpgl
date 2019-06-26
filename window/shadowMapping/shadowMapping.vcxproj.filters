@@ -13,10 +13,48 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="glsl">
+      <UniqueIdentifier>{45addbdc-6c0c-4ed6-868b-ec2e94b09b92}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="shadowMapping.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="shadowMappingBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="3.1.1.debug_quad_v.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="3.1.1.shadow_mapping_depth_v.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="3.1.1.shadow_mapping_depth_f.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="3.1.1.debug_quad_depth_f.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="3.1.2.debug_quad_depth_f.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="3.1.2.debug_quad_v.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="3.1.2.shadow_mapping_depth_f.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="3.1.2.shadow_mapping_depth_v.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="3.1.2.shadow_mapping_f.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="3.1.2.shadow_mapping_v.glsl">
+      <Filter>glsl</Filter>
+    </None>
   </ItemGroup>
 </Project>

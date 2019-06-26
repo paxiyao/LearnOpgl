@@ -139,6 +139,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="shadowMapping.cpp" />
+    <ClCompile Include="shadowMappingBase.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="3.1.1.debug_quad_v.glsl" />
+    <None Include="3.1.1.debug_quad_depth_f.glsl" />
+    <None Include="3.1.1.shadow_mapping_depth_f.glsl" />
+    <None Include="3.1.1.shadow_mapping_depth_v.glsl" />
+    <None Include="3.1.2.debug_quad_depth_f.glsl" />
+    <None Include="3.1.2.debug_quad_v.glsl" />
+    <None Include="3.1.2.shadow_mapping_depth_f.glsl" />
+    <None Include="3.1.2.shadow_mapping_depth_v.glsl" />
+    <None Include="3.1.2.shadow_mapping_f.glsl" />
+    <None Include="3.1.2.shadow_mapping_v.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

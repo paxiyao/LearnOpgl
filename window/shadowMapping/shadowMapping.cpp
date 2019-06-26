@@ -1,3 +1,6 @@
+#define __CUSTOM__TEST__ false
+#if __CUSTOM__TEST__
+
 #include "glad.c"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -19,6 +22,9 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 void processInput(GLFWwindow *window);
 unsigned int loadTexture(const char *path);
+void renderScene(const Shader &shader);
+void renderCube();
+void renderQuad();
 
 // settings
 const unsigned int SCR_WIDTH = 1280;
@@ -81,8 +87,8 @@ int main()
 
 	// build and compile shaders
 	// -------------------------
-	Shader simpleDepthShader("3.1.1.shadow_mapping_depth.vs", "3.1.1.shadow_mapping_depth.fs");
-	Shader debugDepthQuad("3.1.1.debug_quad.vs", "3.1.1.debug_quad_depth.fs");
+	Shader simpleDepthShader("3.1.1.shadow_mapping_depth_v.glsl", "3.1.1.shadow_mapping_depth_f.glsl");
+	Shader debugDepthQuad("3.1.1.debug_quad_v.glsl", "3.1.1.debug_quad_depth_f.glsl");
 	// set up vertex data (and buffer(s)) and configure vertex attributes
 	// ------------------------------------------------------------------
 	float planeVertices[] = {
@@ -436,3 +442,5 @@ unsigned int loadTexture(char const * path)
 
 	return textureID;
 }
+
+#endif __CUSTOM__TEST__

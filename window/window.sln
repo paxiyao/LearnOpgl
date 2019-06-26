@@ -69,6 +69,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shadows", "Shadows", "{ED01
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "shadowMapping", "shadowMapping\shadowMapping.vcxproj", "{3CEB16A0-0F7B-484E-B9A7-2424B6F41AF7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pointShadow", "pointShadow\pointShadow.vcxproj", "{4EB9B2B9-4248-4F92-A3A8-689C44327E1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -293,6 +295,14 @@ Global
 		{3CEB16A0-0F7B-484E-B9A7-2424B6F41AF7}.Release|x64.Build.0 = Release|x64
 		{3CEB16A0-0F7B-484E-B9A7-2424B6F41AF7}.Release|x86.ActiveCfg = Release|Win32
 		{3CEB16A0-0F7B-484E-B9A7-2424B6F41AF7}.Release|x86.Build.0 = Release|Win32
+		{4EB9B2B9-4248-4F92-A3A8-689C44327E1D}.Debug|x64.ActiveCfg = Debug|x64
+		{4EB9B2B9-4248-4F92-A3A8-689C44327E1D}.Debug|x64.Build.0 = Debug|x64
+		{4EB9B2B9-4248-4F92-A3A8-689C44327E1D}.Debug|x86.ActiveCfg = Debug|Win32
+		{4EB9B2B9-4248-4F92-A3A8-689C44327E1D}.Debug|x86.Build.0 = Debug|Win32
+		{4EB9B2B9-4248-4F92-A3A8-689C44327E1D}.Release|x64.ActiveCfg = Release|x64
+		{4EB9B2B9-4248-4F92-A3A8-689C44327E1D}.Release|x64.Build.0 = Release|x64
+		{4EB9B2B9-4248-4F92-A3A8-689C44327E1D}.Release|x86.ActiveCfg = Release|Win32
+		{4EB9B2B9-4248-4F92-A3A8-689C44327E1D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -326,6 +336,7 @@ Global
 		{0C5EC4B7-3641-46DF-84D9-F73694D44C2D} = {B5290872-593A-4233-B343-0225FA87EFF8}
 		{ED019776-79E1-4C18-8710-D4F3D7062589} = {B5290872-593A-4233-B343-0225FA87EFF8}
 		{3CEB16A0-0F7B-484E-B9A7-2424B6F41AF7} = {ED019776-79E1-4C18-8710-D4F3D7062589}
+		{4EB9B2B9-4248-4F92-A3A8-689C44327E1D} = {ED019776-79E1-4C18-8710-D4F3D7062589}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF82F4D1-E477-4765-8D1A-588C40D0A7BC}
