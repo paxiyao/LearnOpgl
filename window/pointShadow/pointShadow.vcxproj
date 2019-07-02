@@ -141,12 +141,11 @@
     <ClCompile Include="pointShadow.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="3.2.1.debug_quad_depth_f.glsl" />
-    <None Include="3.2.1.debug_quad_v.glsl" />
-    <None Include="3.2.1.shadow_mapping_depth_f.glsl" />
-    <None Include="3.2.1.shadow_mapping_depth_v.glsl" />
-    <None Include="3.2.1.shadow_mapping_f.glsl" />
-    <None Include="3.2.1.shadow_mapping_v.glsl" />
+    <None Include="3.2.1.point_shadows.f.glsl" />
+    <None Include="3.2.1.point_shadows.v.glsl" />
+    <None Include="3.2.1.point_shadows_depth.f.glsl" />
+    <None Include="3.2.1.point_shadows_depth.g.glsl" />
+    <None Include="3.2.1.point_shadows_depth.v.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
