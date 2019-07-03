@@ -132,6 +132,14 @@ int main()
 	// -------------
 	glm::vec3 lightPos(0.0f, 0.0f, 0.0f);
 
+	glm::vec3 sampleOffsetDirections[20] = {
+		glm::vec3(1, 1, 1), glm::vec3(1, -1, 1), glm::vec3(-1, -1, 1), glm::vec3(-1, 1, 1),
+		glm::vec3(1, 1, -1), glm::vec3(1, -1, -1), glm::vec3(-1, -1, -1), glm::vec3(-1, 1, -1),
+		glm::vec3(1, 1, 0), glm::vec3(1, -1, 0), glm::vec3(-1, -1, 0), glm::vec3(-1, 1, 0),
+		glm::vec3(1, 0, 1), glm::vec3(-1, 0, 1), glm::vec3(1, 0, -1), glm::vec3(-1, 0, -1),
+		glm::vec3(0, 1, 1), glm::vec3(0, -1, 1), glm::vec3(0, -1, -1), glm::vec3(0, 1, -1)
+	};
+
 	// render loop
 	// -----------
 	while (!glfwWindowShouldClose(window))
@@ -196,6 +204,10 @@ int main()
 		shader.setVec3("viewPos", camera.Position);
 		shader.setInt("shadows", shadows); // enable/disable shadows by pressing 'SPACE'
 		shader.setFloat("far_plane", far_plane);
+		for (unsigned int i = 0; i < 20; i++)
+		{
+			shader.setVec3("sampleOffsetDirections[" + std::to_string(i) + "]", sampleOffsetDirections[i]);
+		}
 		glActiveTexture(GL_TEXTURE0);
 		glBindTexture(GL_TEXTURE_2D, woodTexture);
 		glActiveTexture(GL_TEXTURE1);
