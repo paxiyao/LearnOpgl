@@ -146,12 +146,18 @@
     <None Include="3.1.1.debug_quad_depth_f.glsl" />
     <None Include="3.1.1.shadow_mapping_depth_f.glsl" />
     <None Include="3.1.1.shadow_mapping_depth_v.glsl" />
-    <None Include="3.1.2.debug_quad_depth_f.glsl" />
-    <None Include="3.1.2.debug_quad_v.glsl" />
-    <None Include="3.1.2.shadow_mapping_depth_f.glsl" />
-    <None Include="3.1.2.shadow_mapping_depth_v.glsl" />
-    <None Include="3.1.2.shadow_mapping_f.glsl" />
-    <None Include="3.1.2.shadow_mapping_v.glsl" />
+    <None Include="3.1.2.debug_quad.vs" />
+    <None Include="3.1.2.debug_quad_depth.fs" />
+    <None Include="3.1.2.shadow_mapping.fs" />
+    <None Include="3.1.2.shadow_mapping.vs" />
+    <None Include="3.1.2.shadow_mapping_depth.fs" />
+    <None Include="3.1.2.shadow_mapping_depth.vs" />
+    <None Include="3.1.3.debug_quad.vs" />
+    <None Include="3.1.3.debug_quad_depth.fs" />
+    <None Include="3.1.3.shadow_mapping.fs" />
+    <None Include="3.1.3.shadow_mapping.vs" />
+    <None Include="3.1.3.shadow_mapping_depth.fs" />
+    <None Include="3.1.3.shadow_mapping_depth.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
