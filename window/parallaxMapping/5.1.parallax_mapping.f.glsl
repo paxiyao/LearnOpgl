@@ -18,7 +18,7 @@ uniform float heightScale;
 vec2 ParallaxMapping(vec2 texCoords, vec3 viewDir)
 { 
     float height =  texture(depthMap, texCoords).r;     
-    return texCoords - viewDir.xy * (height * heightScale);        
+    return texCoords - viewDir.xy / viewDir.z * (height * heightScale);        
 }
 
 void main()

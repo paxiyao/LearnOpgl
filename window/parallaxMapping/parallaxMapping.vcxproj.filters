@@ -21,12 +21,30 @@
     <ClCompile Include="parallaxMapping.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="steep_parallax_mapping.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="parallax_occlusion mapping.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="5.1.parallax_mapping.v.glsl">
       <Filter>glsl</Filter>
     </None>
     <None Include="5.1.parallax_mapping.f.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="5.2.parallax_mapping.f.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="5.2.parallax_mapping.v.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="5.3.parallax_mapping.f.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="5.3.parallax_mapping.v.glsl">
       <Filter>glsl</Filter>
     </None>
   </ItemGroup>

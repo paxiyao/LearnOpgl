@@ -1,3 +1,6 @@
+#define __CUSTOM__TEST__ false
+#if __CUSTOM__TEST__
+
 #include <glad.c>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -362,3 +365,5 @@ unsigned int loadTexture(char const * path)
 
 	return textureID;
 }
+
+#endif __CUSTOM__TEST__

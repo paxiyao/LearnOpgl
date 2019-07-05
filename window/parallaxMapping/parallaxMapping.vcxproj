@@ -139,10 +139,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="parallaxMapping.cpp" />
+    <ClCompile Include="parallax_occlusion mapping.cpp" />
+    <ClCompile Include="steep_parallax_mapping.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="5.1.parallax_mapping.f.glsl" />
     <None Include="5.1.parallax_mapping.v.glsl" />
+    <None Include="5.2.parallax_mapping.f.glsl" />
+    <None Include="5.2.parallax_mapping.v.glsl" />
+    <None Include="5.3.parallax_mapping.f.glsl" />
+    <None Include="5.3.parallax_mapping.v.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
