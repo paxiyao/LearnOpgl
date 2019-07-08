@@ -123,6 +123,14 @@
   <ItemGroup>
     <ClCompile Include="ssao.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="9.ssao.f.glsl" />
+    <None Include="9.ssao.v.glsl" />
+    <None Include="9.ssao_blur.f.glsl" />
+    <None Include="9.ssao_geometry.f.glsl" />
+    <None Include="9.ssao_geometry.v.glsl" />
+    <None Include="9.ssao_lighting.f.glsl" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -13,10 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="glsl">
+      <UniqueIdentifier>{4a885974-2e11-4463-a756-c93ec4869f1c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ssao.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="9.ssao.f.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="9.ssao.v.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="9.ssao_blur.f.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="9.ssao_geometry.f.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="9.ssao_geometry.v.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="9.ssao_lighting.f.glsl">
+      <Filter>glsl</Filter>
+    </None>
   </ItemGroup>
 </Project>
