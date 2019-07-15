@@ -265,6 +265,10 @@ int main()
 			发生这一现象的原因是，深度测试和混合一起使用的话会产生一些麻烦。当写入深度缓冲时，深度缓冲不会检查片
 			段是否是透明的，所以透明的部分会和其它值一样写入到深度缓冲中。结果就是窗户的整个四边形不论透明度都会
 			进行深度测试。即使透明的部分应该显示背后的窗户，深度测试仍然丢弃了它们
+			当绘制一个有不透明和透明物体的场景的时候，大体的原则如下：
+				1.先绘制所有不透明的物体。
+				2.对所有透明的物体排序。
+				3.按顺序绘制所有透明的物体。
 		*/
 		// windows
 		glBindVertexArray(transparentVAO);
@@ -276,6 +280,13 @@ int main()
 			shader.setMat4("model", model);
 			glDrawArrays(GL_TRIANGLES, 0, 6);
 		}
+		//for (std::vector<glm::vec3>::iterator it = windows.begin(); it != windows.end(); ++it)
+		//{
+		//	model = glm::mat4();
+		//	model = glm::translate(model, *it);
+		//	shader.setMat4("model", model);
+		//	glDrawArrays(GL_TRIANGLES, 0, 6);
+		//}
 		glBindVertexArray(0);
 
 		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
