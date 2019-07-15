@@ -1,5 +1,5 @@
 #define __CUSTOM__TEST__ false
-#if true == __CUSTOM__TEST__
+#if __CUSTOM__TEST__
 
 #include "glad.c"
 #include <glad/glad.h>
@@ -190,9 +190,9 @@ int main()
 
 	// load textures
 	// -------------
-	unsigned int cubeTexture = loadTexture(FileSystem::getPath("textures/marble.jpg").c_str());
-	unsigned int floorTexture = loadTexture(FileSystem::getPath("textures/metal.png").c_str());
-	unsigned int grassTexture = loadTexture(FileSystem::getPath("textures/grass.png").c_str());
+	unsigned int cubeTexture = loadTexture(FileSystem::getPath("resources/textures/marble.jpg").c_str());
+	unsigned int floorTexture = loadTexture(FileSystem::getPath("resources/textures/metal.png").c_str());
+	unsigned int grassTexture = loadTexture(FileSystem::getPath("resources/textures/grass.png").c_str());
 
 	// transparent vegetation locations
 	// --------------------------------
