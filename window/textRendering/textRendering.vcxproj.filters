@@ -13,10 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="glsl">
+      <UniqueIdentifier>{10c8eb4c-bc86-4e6a-913c-6482ef1aed51}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="textRendering.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="textRendering.f.glsl">
+      <Filter>glsl</Filter>
+    </None>
+    <None Include="textRendering.v.glsl">
+      <Filter>glsl</Filter>
+    </None>
   </ItemGroup>
 </Project>

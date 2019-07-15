@@ -15,6 +15,7 @@
 #include FT_FREETYPE_H
 // GL includes
 #include "Shader.h"
+#include <learnopengl/filesystem.h>
 
 // Properties
 const GLuint WIDTH = 800, HEIGHT = 600;
@@ -58,7 +59,7 @@ int main()
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	// Compile and setup the shader
-	Shader shader("shaders/text.vs", "shaders/text.frag");
+	Shader shader("textRendering.v.glsl", "textRendering.f.glsl");
 	glm::mat4 projection = glm::ortho(0.0f, static_cast<GLfloat>(WIDTH), 0.0f, static_cast<GLfloat>(HEIGHT));
 	shader.Use();
 	glUniformMatrix4fv(glGetUniformLocation(shader.Program, "projection"), 1, GL_FALSE, glm::value_ptr(projection));
@@ -71,7 +72,7 @@ int main()
 
 	// Load font as face
 	FT_Face face;
-	if (FT_New_Face(ft, "fonts/arial.ttf", 0, &face))
+	if (FT_New_Face(ft, FileSystem::getPath("resources/fonts/arial.ttf").c_str(), 0, &face))
 		std::cout << "ERROR::FREETYPE: Failed to load font" << std::endl;
 
 	// Set size to load glyphs as
