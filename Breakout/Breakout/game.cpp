@@ -2,6 +2,7 @@
 
 // Constructor 
 Game::Game(GLuint width, GLuint height)
+	:State(GAME_ACTIVE), Keys(), Width(0), Height(0)
 {
 
 }
