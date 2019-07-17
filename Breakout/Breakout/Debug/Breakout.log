@@ -1,2 +1,6 @@
 ﻿  game.cpp
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(79): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(80): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(81): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(82): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
   Breakout.vcxproj -> F:\MyGithub\LearnOpgl\Breakout\Debug\Breakout.exe
