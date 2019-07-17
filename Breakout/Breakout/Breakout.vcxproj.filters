@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{db92ab04-cbc6-4047-b298-eed5644bfbd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders\sprite">
+      <UniqueIdentifier>{e81de12c-6757-4aa4-af2f-48365ceab337}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
@@ -25,6 +31,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="resource_manager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite_renderer.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -44,5 +53,16 @@
     <ClCompile Include="program.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="sprite_renderer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\sprite\sprite.f.glsl">
+      <Filter>shaders\sprite</Filter>
+    </None>
+    <None Include="shaders\sprite\sprite.v.glsl">
+      <Filter>shaders\sprite</Filter>
+    </None>
   </ItemGroup>
 </Project>
