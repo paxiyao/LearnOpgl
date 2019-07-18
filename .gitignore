@@ -6,4 +6,4 @@
 /window/.vs/
 /window/Release/
 /window/*/Release/
-
+*.ipch
