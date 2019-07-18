@@ -19,6 +19,9 @@
     <Filter Include="shaders\sprite">
       <UniqueIdentifier>{e81de12c-6757-4aa4-af2f-48365ceab337}</UniqueIdentifier>
     </Filter>
+    <Filter Include="shaders\particle">
+      <UniqueIdentifier>{9cde94bf-ce0b-4b90-918c-83e2b2d57f6f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
@@ -43,6 +46,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="ball_object.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="particle_generator.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -74,6 +80,9 @@
     <ClCompile Include="ball_object.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="particle_generator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\sprite\sprite.f.glsl">
@@ -81,6 +90,12 @@
     </None>
     <None Include="shaders\sprite\sprite.v.glsl">
       <Filter>shaders\sprite</Filter>
+    </None>
+    <None Include="shaders\particle\particle.f.glsl">
+      <Filter>shaders\particle</Filter>
+    </None>
+    <None Include="shaders\particle\particle.v.glsl">
+      <Filter>shaders\particle</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -23,6 +23,7 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="game_level.h" />
     <ClInclude Include="game_object.h" />
+    <ClInclude Include="particle_generator.h" />
     <ClInclude Include="resource_manager.h" />
     <ClInclude Include="shader.h" />
     <ClInclude Include="sprite_renderer.h" />
@@ -33,6 +34,7 @@
     <ClCompile Include="game.cpp" />
     <ClCompile Include="game_level.cpp" />
     <ClCompile Include="game_object.cpp" />
+    <ClCompile Include="particle_generator.cpp" />
     <ClCompile Include="program.cpp" />
     <ClCompile Include="resource_manager.cpp" />
     <ClCompile Include="shader.cpp" />
@@ -40,6 +42,8 @@
     <ClCompile Include="texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="shaders\particle\particle.f.glsl" />
+    <None Include="shaders\particle\particle.v.glsl" />
     <None Include="shaders\sprite\sprite.f.glsl" />
     <None Include="shaders\sprite\sprite.v.glsl" />
   </ItemGroup>
