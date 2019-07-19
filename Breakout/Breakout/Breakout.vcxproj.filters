@@ -25,6 +25,9 @@
     <Filter Include="shaders\post_processing">
       <UniqueIdentifier>{a3ff340d-c67f-4884-a781-9bd510f6689d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="shaders\text_render">
+      <UniqueIdentifier>{20b05a44-47d2-4a29-b588-848e5a616cdc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
@@ -58,6 +61,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="post_processor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="text_renderer.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -95,6 +101,9 @@
     <ClCompile Include="post_processor.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="text_renderer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\sprite\sprite.f.glsl">
@@ -114,6 +123,12 @@
     </None>
     <None Include="shaders\post_processing\post_processing.v.glsl">
       <Filter>shaders\post_processing</Filter>
+    </None>
+    <None Include="shaders\text_render\text_render.f.glsl">
+      <Filter>shaders\text_render</Filter>
+    </None>
+    <None Include="shaders\text_render\text_render.v.glsl">
+      <Filter>shaders\text_render</Filter>
     </None>
   </ItemGroup>
 </Project>

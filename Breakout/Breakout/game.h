@@ -53,7 +53,9 @@ public:
 	// Game state
 	GameState              State;
 	GLboolean              Keys[1024];
+	GLboolean			   KeysProcessed[1024];
 	GLuint                 Width, Height;
+	GLuint				   Lives;
 	std::vector<GameLevel> Levels;
 	GLuint                 Level;
 	std::vector<PowerUp>   PowerUps;

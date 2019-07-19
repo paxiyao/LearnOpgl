@@ -1,11 +1,13 @@
 ﻿  game.cpp
-f:\mygithub\learnopgl\breakout\breakout\game.cpp(73): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
-f:\mygithub\learnopgl\breakout\breakout\game.cpp(74): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
-f:\mygithub\learnopgl\breakout\breakout\game.cpp(75): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
-f:\mygithub\learnopgl\breakout\breakout\game.cpp(76): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
-f:\mygithub\learnopgl\breakout\breakout\game.cpp(168): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
-f:\mygithub\learnopgl\breakout\breakout\game.cpp(175): warning C4244: “参数”: 从“float”转换到“GLuint”，可能丢失数据
-f:\mygithub\learnopgl\breakout\breakout\game.cpp(177): warning C4244: “参数”: 从“float”转换到“GLuint”，可能丢失数据
-f:\mygithub\learnopgl\breakout\breakout\game.cpp(179): warning C4244: “参数”: 从“float”转换到“GLuint”，可能丢失数据
-f:\mygithub\learnopgl\breakout\breakout\game.cpp(181): warning C4244: “参数”: 从“float”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(84): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(85): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(86): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(87): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(231): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(240): warning C4244: “参数”: 从“GLuint”转换到“GLfloat”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(246): warning C4244: “参数”: 从“GLuint”转换到“GLfloat”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(253): warning C4244: “参数”: 从“float”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(255): warning C4244: “参数”: 从“float”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(257): warning C4244: “参数”: 从“float”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(259): warning C4244: “参数”: 从“float”转换到“GLuint”，可能丢失数据
   Breakout.vcxproj -> F:\MyGithub\LearnOpgl\Breakout\Debug\Breakout.exe
