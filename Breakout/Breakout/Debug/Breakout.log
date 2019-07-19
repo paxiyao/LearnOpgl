@@ -1,8 +1,11 @@
-﻿  particle_generator.cpp
-f:\mygithub\learnopgl\breakout\breakout\particle_generator.cpp(25): warning C4244: “-=”: 从“double”转换到“T”，可能丢失数据
-          with
-          [
-              T=float
-          ]
-f:\mygithub\learnopgl\breakout\breakout\particle_generator.cpp(105): warning C4244: “初始化”: 从“double”转换到“GLfloat”，可能丢失数据
+﻿  game.cpp
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(73): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(74): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(75): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(76): warning C4244: “参数”: 从“double”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(168): warning C4244: “参数”: 从“double”转换到“GLfloat”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(175): warning C4244: “参数”: 从“float”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(177): warning C4244: “参数”: 从“float”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(179): warning C4244: “参数”: 从“float”转换到“GLuint”，可能丢失数据
+f:\mygithub\learnopgl\breakout\breakout\game.cpp(181): warning C4244: “参数”: 从“float”转换到“GLuint”，可能丢失数据
   Breakout.vcxproj -> F:\MyGithub\LearnOpgl\Breakout\Debug\Breakout.exe

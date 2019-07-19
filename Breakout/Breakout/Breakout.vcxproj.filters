@@ -22,6 +22,9 @@
     <Filter Include="shaders\particle">
       <UniqueIdentifier>{9cde94bf-ce0b-4b90-918c-83e2b2d57f6f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="shaders\post_processing">
+      <UniqueIdentifier>{a3ff340d-c67f-4884-a781-9bd510f6689d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
@@ -49,6 +52,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="particle_generator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="power_up.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="post_processor.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -83,6 +92,9 @@
     <ClCompile Include="particle_generator.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="post_processor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="shaders\sprite\sprite.f.glsl">
@@ -96,6 +108,12 @@
     </None>
     <None Include="shaders\particle\particle.v.glsl">
       <Filter>shaders\particle</Filter>
+    </None>
+    <None Include="shaders\post_processing\post_processing.f.glsl">
+      <Filter>shaders\post_processing</Filter>
+    </None>
+    <None Include="shaders\post_processing\post_processing.v.glsl">
+      <Filter>shaders\post_processing</Filter>
     </None>
   </ItemGroup>
 </Project>
